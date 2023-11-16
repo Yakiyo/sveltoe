@@ -9,7 +9,7 @@
   }
 </script>
 
-<div class="p-3">
+<div class="container">
   {#each squares as square, i}
     <button on:click={() => onClick(i)}>{square}</button>
   {/each}
@@ -33,11 +33,20 @@
     font-size: 24px;
     font-weight: bold;
     line-height: 34px;
-    height: 34px;
+    height: 68px;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 34px;
+    width: 68px;
+  }
+
+  .container {
+    width: 204px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container > button {
+    flex: 1 0 31%;
   }
 </style>
