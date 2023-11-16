@@ -1,7 +1,8 @@
 <script lang="ts">
-  import { writable } from "svelte/store";
-
-  const square = writable(Array(9).fill(null));
+  import { writable, type Writable } from "svelte/store";
+  const squares: (string)[] = Array(9).fill('');
 </script>
 
-<div></div>
+{#each squares as square, i}
+  <button>{square}</button>
+{/each}
